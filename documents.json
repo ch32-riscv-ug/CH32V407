@@ -489,8 +489,8 @@
       "sources": {
         "en": {
           "file_id": 398,
-          "version": "1.8",
-          "scope": "CH32V004"
+          "version": "1.9",
+          "scope": "CH32V004F6P1, CH32V004F6U1"
         },
         "zh": {
           "file_id": 474,
@@ -648,7 +648,7 @@
       "name": "CH32V205DS0.PDF",
       "kind": "datasheet",
       "repositories": [
-        "CH32V20x"
+        "CH32V205"
       ],
       "status": "assigned",
       "sources": {
@@ -668,7 +668,7 @@
       "name": "CH32V205EVT.ZIP",
       "kind": "evt",
       "repositories": [
-        "CH32V20x"
+        "CH32V205"
       ],
       "status": "assigned",
       "sources": {
@@ -683,7 +683,7 @@
       "name": "CH32V205RM.PDF",
       "kind": "reference-manual",
       "repositories": [
-        "CH32V20x"
+        "CH32V205"
       ],
       "status": "assigned",
       "sources": {
