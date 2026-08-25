@@ -6,6 +6,8 @@
 
 ### Debug / serial defaults
 
+Where these land **without writing a remap register**. SWD is live at reset; the UART pads are not -- the pin must still be put into alternate-function mode. See `route` in tables/README.ja.md.
+
 | Series | SWDIO | SWCLK | UART TX | UART RX |
 |---|---|---|---|---|
 | CH32V407 | PA13 | PA14 | PA9 (USART1); PA2 (USART2) | PA10 (USART1); PA3 (USART2) |
@@ -194,10 +196,10 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | PC15-OSC32_OUT | I/O/A | 4 | 9 | 4 | OSC |
 | VBAT | P | 1 | 6 | 1 |  |
 | VDD | P | 18/32/49/64 | 11/28/46/75/100 | 18/35/51/68 |  |
-| VDDA | P | - | 22 | - |  |
+| VDDA | P | 13 | 22 | 13 |  |
 | VDDK | P | 27 | 40 | 30 |  |
 | VREF+ | P | 13 | 21 | 13 |  |
-| VREF- | P | - | 20 | - |  |
+| VREF- | P | 12 | 20 | 12 |  |
 | VSS | P | 33/63 | 10/27/41/47/99 | EP |  |
 | VSSA | P | 12 | 19 | 12 |  |
 
@@ -379,10 +381,10 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | VBAT | P | 1 | 6 | 1 |  |
 | VDD | P | 18/32/49/64 | 11/28/46/75/100 | 18/35/51/68 |  |
 | VDD18 | P | 34 | 48 | 36 |  |
-| VDDA | P | - | 22 | - |  |
+| VDDA | P | 13 | 22 | 13 |  |
 | VDDK | P | 27 | 40 | 30 |  |
 | VREF+ | P | 13 | 21 | 13 |  |
-| VREF- | P | - | 20 | - |  |
+| VREF- | P | 12 | 20 | 12 |  |
 | VSS | P | 33/63 | 10/27/41/47/99 | EP |  |
 | VSSA | P | 12 | 19 | 12 |  |
 
@@ -475,8 +477,9 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 | Series | Field | Register | Bits | Values | Reset |
 |---|---|---|---|---|---|
-| CH32V407 | CAN_REMAP | PCFR1 | PCFR1:13;PCFR1:14 | 0;2;3 | 0 |
+| CH32V407 | CAN_REMAP | PCFR1 | PCFR1:13;PCFR1:14 | 0;1;2;3 | 0 |
 | CH32V407 | DVP_REMAP | PCFR2 | PCFR2:13 | 0;1 | 0 |
+| CH32V407 | ETHPHY_LED_REMAP | PCFR1 | PCFR1:31 | 0;1 | 0 |
 | CH32V407 | FSMC_REMAP | PCFR2 | PCFR2:0 | 0;1 | 0 |
 | CH32V407 | I2C1_REMAP | PCFR1 | PCFR1:1 | 0;1 | 0 |
 | CH32V407 | I3C_REMAP | PCFR2 | PCFR2:14 | 0;1 | 0 |
@@ -499,8 +502,9 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | CH32V407 | USART7_REMAP | PCFR2 | PCFR2:22;PCFR2:23 | 0;1;2;3 | 0 |
 | CH32V407 | USART8_REMAP | PCFR2 | PCFR2:24;PCFR2:25 | 0;1;2;3 | 0 |
 | CH32V407 | USART9_REMAP | PCFR2 | PCFR2:28;PCFR2:29 | 0;1;2;3 | 0 |
-| CH32V467 | CAN_REMAP | PCFR1 | PCFR1:13;PCFR1:14 | 0;2;3 | 0 |
+| CH32V467 | CAN_REMAP | PCFR1 | PCFR1:13;PCFR1:14 | 0;1;2;3 | 0 |
 | CH32V467 | DVP_REMAP | PCFR2 | PCFR2:13 | 0;1 | 0 |
+| CH32V467 | ETHPHY_LED_REMAP | PCFR1 | PCFR1:31 | 0;1 | 0 |
 | CH32V467 | FSMC_REMAP | PCFR2 | PCFR2:0 | 0;1 | 0 |
 | CH32V467 | I2C1_REMAP | PCFR1 | PCFR1:1 | 0;1 | 0 |
 | CH32V467 | I3C_REMAP | PCFR2 | PCFR2:14 | 0;1 | 0 |
@@ -572,7 +576,7 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 | HBPERIPH | `0x40000000` | bus |
 | PERIPH | `0x40000000` | bus |
 | FLASH | `0x00000000` | link-origin |
-| RAM | `0x20000000` | link-origin |
+| RAM | `0x20000400` | link-origin |
 | FLASH | `0x08000000` | memory |
 | OB | `0x1ffff800` | memory |
 | SRAM | `0x20000000` | memory |
