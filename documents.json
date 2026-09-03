@@ -58,7 +58,12 @@
         "zh": {
           "file_id": 561,
           "version": "1.2",
-          "scope": "CH32V407，CH32V467"
+          "scope": "CH32V407VET6，CH32V407WEU6，CH32V407RET6，CH32V467VET6，CH32V467WEU6，CH32V467RET6"
+        },
+        "en": {
+          "file_id": 455,
+          "version": "1.2",
+          "scope": "CH32V407VET6，CH32V407WEU6，CH32V407RET6，CH32V467VET6，CH32V467WEU6，CH32V467RET6"
         }
       }
     }
