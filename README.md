@@ -2,7 +2,7 @@
 
 <!-- This file is generated from ch32-riscv-ug/ch32-device-data (index/ + evidence/ + pipeline/build/build_readme.py). Edit there, not here. -->
 
-[Choose a part](#product-comparison) &middot; [Pin viewer](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V407) &middot; [Pin maps](#pin-maps--alternate-functions) &middot; [Errata](#errata) &middot; [Examples](#evt-examples) &middot; [Documents](#documents) &middot; [Address map](#address-map)
+[Choose a part](#product-comparison) &middot; [Documents](#documents) &middot; [Pin maps](#pin-maps--alternate-functions) &middot; [Pin viewer](https://ch32-riscv-ug.github.io/ch32-device-data/pins.html?chip=CH32V407) &middot; [Errata](#errata) &middot; [Examples](#evt-examples) &middot; [Address map](#address-map)
 
 ## Quick start
 
@@ -14,6 +14,11 @@ Where these land **without writing a remap register**. SWD is live at reset; the
 |---|---|---|---|---|
 | CH32V407 | PA13 | PA14 | PA9 (USART1); PA2 (USART2) | PA10 (USART1); PA3 (USART2) |
 | CH32V467 | PA13 | PA14 | PA9 (USART1); PA2 (USART2) | PA10 (USART1); PA3 (USART2) |
+
+### Datasheets and reference manual
+
+- CH32V407DS0.PDF (datasheet): [English](https://ch32-riscv-ug.github.io/CH32V407/datasheet_en/CH32V407DS0.PDF) · [中文](https://ch32-riscv-ug.github.io/CH32V407/datasheet_zh/CH32V407DS0.PDF)
+- CH32V407RM.PDF (reference manual): [English](https://ch32-riscv-ug.github.io/CH32V407/datasheet_en/CH32V407RM.PDF) · [中文](https://ch32-riscv-ug.github.io/CH32V407/datasheet_zh/CH32V407RM.PDF)
 
 ## Series
 
@@ -127,6 +132,44 @@ Only the 4 rows that differ between these 3 products; the other 26 are the same 
 | CPU main frequency | Max: 200MHz | Max: 200MHz | Max: 200MHz |
 
 </details>
+
+## Block diagrams
+
+### CH32V407
+
+<img src="image/system_CH32V407.png" alt="CH32V407 system block diagram" />
+
+System block diagram from the [WCH product page](https://www.wch-ic.com/products/CH32V407.html).
+
+<details><summary>Internal block diagram (datasheet)</summary>
+
+<img src="image/architecture_CH32V407.png" alt="CH32V407 internal block diagram" />
+
+</details>
+
+### CH32V467
+
+<details><summary>Internal block diagram (datasheet)</summary>
+
+<img src="image/architecture_CH32V467.png" alt="CH32V467 internal block diagram" />
+
+</details>
+
+## Documents
+
+| Document | Kind | English | 中文 |
+|---|---|---|---|
+| CH32V407DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32V407DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_en/CH32V407DS0.PDF) v1.4 | [page](https://www.wch.cn/downloads/CH32V407DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_zh/CH32V407DS0.PDF) v1.4 |
+| CH32V407RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32V407RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_en/CH32V407RM.PDF) v1.3 | [page](https://www.wch.cn/downloads/CH32V407RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_zh/CH32V407RM.PDF) v1.3 |
+| CH32V407EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V407EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT) v1.5 |
+
+### Evaluation boards
+
+- board-manual:en: [CH32V4x7 Evaluation Board Reference-EN.pdf](https://ch32-riscv-ug.github.io/CH32V407/EVT/PUB/CH32V4x7%20Evaluation%20Board%20Reference-EN.pdf)
+- board-manual:zh: [CH32V4x7评估板说明书.pdf](https://ch32-riscv-ug.github.io/CH32V407/EVT/PUB/CH32V4x7%E8%AF%84%E4%BC%B0%E6%9D%BF%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)
+- schematic-pdf: [CH32V4x7SCH.pdf](https://ch32-riscv-ug.github.io/CH32V407/EVT/PUB/CH32V4x7SCH.pdf)
+
+4 board schematics under `EVT/PUB/SCHPCB/`: `CH32V4x7RET-R0`, `CH32V4x7VET-R0`, `CH32V4x7VET-USB`, `CH32V4x7WEU-R0`
 
 ## Packages & pinout drawings
 
@@ -581,14 +624,6 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 
 </details>
 
-## Block diagrams
-
-### CH32V407
-<img src="image/architecture_CH32V407.png" alt="CH32V407 block diagram" />
-
-### CH32V467
-<img src="image/architecture_CH32V467.png" alt="CH32V467 block diagram" />
-
 ## Errata
 
 - The non-zero-wait flash area additionally supports RVV instructions and 64-bit DMA access. *(applies: CH32V407, CH32V467; 5th-to-last digit of lot number > 0)*
@@ -602,22 +637,6 @@ Pin functions (filterable): [ALL](https://ch32-riscv-ug.github.io/ch32-device-da
 172 routines in [EVT/EXAM](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM):
 
 [ADC](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/ADC) 13 · [APPLICATION](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/APPLICATION) 10 · [ARGB](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/ARGB) 2 · [BKP](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/BKP) 1 · [CAN](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/CAN) 3 · [CPU](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/CPU) 9 · [CRC](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/CRC) 1 · [DAC](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/DAC) 8 · [DMA](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/DMA) 1 · [DVP](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/DVP) 2 · [ETH](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/ETH) 20 · [EXTI](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/EXTI) 1 · [FLASH](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/FLASH) 1 · [FSMC](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/FSMC) 4 · [GPIO](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/GPIO) 1 · [I2C](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/I2C) 6 · [I2S](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/I2S) 2 · [I3C](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/I3C) 1 · [IAP](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/IAP) 1 · [INT](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/INT) 1 · [IWDG](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/IWDG) 1 · [LTDC](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/LTDC) 1 · [OPA](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/OPA) 1 · [PSRAM](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/PSRAM) 1 · [PWR](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/PWR) 9 · [RCC](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/RCC) 4 · [RNG](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/RNG) 1 · [RTC](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/RTC) 2 · [SDIO](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/SDIO) 2 · [SDI_Printf](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/SDI_Printf) 1 · [SPI](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/SPI) 9 · [SYSTICK](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/SYSTICK) 1 · [TIM](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/TIM) 16 · [USART](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/USART) 10 · [USB](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/USB) 24 · [WWDG](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT/EXAM/WWDG) 1
-
-## Documents
-
-| Document | Kind | English | 中文 |
-|---|---|---|---|
-| CH32V407DS0.PDF | datasheet | [page](https://www.wch-ic.com/downloads/CH32V407DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_en/CH32V407DS0.PDF) v1.4 | [page](https://www.wch.cn/downloads/CH32V407DS0_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_zh/CH32V407DS0.PDF) v1.4 |
-| CH32V407RM.PDF | reference-manual | [page](https://www.wch-ic.com/downloads/CH32V407RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_en/CH32V407RM.PDF) v1.3 | [page](https://www.wch.cn/downloads/CH32V407RM_PDF.html) [mirror](https://ch32-riscv-ug.github.io/CH32V407/datasheet_zh/CH32V407RM.PDF) v1.3 |
-| CH32V407EVT.ZIP | evt | - | [page](https://www.wch.cn/downloads/CH32V407EVT_ZIP.html) [mirror](https://github.com/ch32-riscv-ug/CH32V407/tree/main/EVT) v1.5 |
-
-### Evaluation boards
-
-- board-manual:en: [CH32V4x7 Evaluation Board Reference-EN.pdf](https://github.com/ch32-riscv-ug/CH32V407/blob/main/EVT/PUB/CH32V4x7%20Evaluation%20Board%20Reference-EN.pdf)
-- board-manual:zh: [CH32V4x7评估板说明书.pdf](https://github.com/ch32-riscv-ug/CH32V407/blob/main/EVT/PUB/CH32V4x7%E8%AF%84%E4%BC%B0%E6%9D%BF%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)
-- schematic-pdf: [CH32V4x7SCH.pdf](https://github.com/ch32-riscv-ug/CH32V407/blob/main/EVT/PUB/CH32V4x7SCH.pdf)
-
-4 board schematics under `EVT/PUB/SCHPCB/`: `CH32V4x7RET-R0`, `CH32V4x7VET-R0`, `CH32V4x7VET-USB`, `CH32V4x7WEU-R0`
 
 ## Reference
 
