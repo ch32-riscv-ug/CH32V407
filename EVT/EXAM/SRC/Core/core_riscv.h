@@ -1,8 +1,8 @@
 /********************************** (C) COPYRIGHT  *******************************
 * File Name          : core_riscv.h
 * Author             : WCH
-* Version            : V1.0.0
-* Date               : 2025/12/01
+* Version            : V1.0.1
+* Date               : 2026/10/26
 * Description        : RISC-V V3V Core Peripheral Access Layer Header File for CH32V4x7
 *********************************************************************************
 * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
@@ -411,7 +411,7 @@ __attribute__( ( always_inline ) ) RV_STATIC_INLINE void NVIC_SystemReset(void)
  * @brief   Implement the assembly instruction function of mcpy, copy
  *        the continuous data from the starting address of SrcAddrStart
  *        to the ending address of SrcAddrEnd to the starting address
- *        of DstAddrStart.(Only for V3F)
+ *        of DstAddrStart.
  *
  * @param   SA - Copy the start address of the source region.
  *          EA - Copy the end address of the source region.

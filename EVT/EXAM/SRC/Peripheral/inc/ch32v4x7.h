@@ -91,7 +91,7 @@ typedef enum IRQn
   USART3_IRQn                 = 55,      /* USART3 global Interrupt                              */
   EXTI15_10_IRQn              = 56,      /* External Line[15:10] Interrupts                      */
   RTCAlarm_IRQn               = 57,      /* RTC Alarm through EXTI Line Interrupt                */
-  USBHS2Wakeup_IRQn           = 58,      /* USBHS2 WakeUp Interrupt                              */
+  USBHS1Wakeup_IRQn           = 58,      /* USBHS1 WakeUp Interrupt                              */
   TIM8_BRK_IRQn               = 59,      /* TIM8 Break Interrupt                                 */
   TIM8_UP_IRQn                = 60,      /* TIM8 Update Interrupt                                */
   TIM8_TRG_COM_IRQn           = 61,      /* TIM8 Trigger and Commutation Interrupt               */
@@ -116,7 +116,7 @@ typedef enum IRQn
   USART9_IRQn                 = 81,      /* USART9 global Interrupt                              */
   USART10_IRQn                = 82,      /* USART10 global Interrupt                             */
   USBHS1_IRQn                 = 83,      /* USBHS1 Interrupt                                     */
-  USBHS1Wakeup_IRQn           = 84,      /* USBHS1 WakeUp Interrupt                              */
+  USBHS2Wakeup_IRQn           = 84,      /* USBHS2 WakeUp Interrupt                              */
   USBHS2_IRQn                 = 85,      /* USBHS2 global Interrupt                              */
   DVP_IRQn                    = 86,      /* DVP global Interrupt                                 */
   USART6_IRQn                 = 87,      /* USART6 global Interrupt                              */

@@ -45,6 +45,9 @@ https://wch.cn
   |      |      |      |      |-- FATFS: 
   |      |      |      |      |      |-- FATFS_SPI_FLASH: 此示例演示了使用FATFS的Winbond W25Qxx SPIFLASH的SPI操作
   |      |      |      |      |      |-- FATFS_SDIO_SD: 此示例演示了如何通过带有FATFS的SDIO接口读写SD卡的全部扇区
+  |      |      |      |      |-- WCHGUI
+  |      |      |      |      |      |-- WCH-GUI-FLASH: GUI 内外部FLASH
+  |      |      |      |      |      |-- WCH-GUI-LIVE: GUI 屏幕显示
   |      |      |      |-- ARGB
   |      |      |      |      |-- Gradient：ARGB例程
   |      |      |      |      |-- PollingFilling: 轮询和中断方式驱动ARGB

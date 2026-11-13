@@ -1,8 +1,8 @@
 /********************************** (C) COPYRIGHT *******************************
 * File Name          : startup_ch32v4x7.s
 * Author             : WCH
-* Version            : V1.0.0
-* Date               : 2025/12/01
+* Version            : V1.0.1
+* Date               : 2026/11/10
 * Description        : CH32V4x7 StartUp File.
 *********************************************************************************
 * Copyright (c) 2021 Nanjing Qinheng Microelectronics Co., Ltd.
@@ -75,7 +75,7 @@ _start:
     .word   USART3_IRQHandler          /* USART3 */
     .word   EXTI15_10_IRQHandler       /* EXTI Line 15..10 */
     .word   RTCAlarm_IRQHandler        /* RTC Alarm through EXTI Line */
-    .word   USBHS2WakeUp_IRQHandler    /* USBHS2 Wakeup from suspend */
+    .word   USBHS1WakeUp_IRQHandler    /* USBHS1 Wakeup from suspend */
     .word   TIM8_BRK_IRQHandler        /* TIM8 Break */
     .word   TIM8_UP_IRQHandler         /* TIM8 Update */
     .word   TIM8_TRG_COM_IRQHandler    /* TIM8 Trigger and Commutation */
@@ -101,7 +101,7 @@ _start:
     .word   USART9_IRQHandler          /* USART9 */
     .word   USART10_IRQHandler         /* USART10 */
     .word   USBHS1_IRQHandler          /* USBHS1 */
-    .word   USBHS1Wakeup_IRQHandler    /* USBHS1Wakeup */
+    .word   USBHS2Wakeup_IRQHandler    /* USBHS2Wakeup */
     .word   USBHS2_IRQHandler          /* USBHS2 */
     .word   DVP_IRQHandler             /* DVP */
     .word   USART6_IRQHandler          /* USART6 */
@@ -173,7 +173,7 @@ _start:
     .weak   USART3_IRQHandler          /* USART3 */
     .weak   EXTI15_10_IRQHandler       /* EXTI Line 15..10 */
     .weak   RTCAlarm_IRQHandler        /* RTC Alarm through EXTI Line */
-    .weak   USBHS2WakeUp_IRQHandler    /* USBHS2 Wakeup from suspend */
+    .weak   USBHS1WakeUp_IRQHandler    /* USBHS1 Wakeup from suspend */
     .weak   TIM8_BRK_IRQHandler        /* TIM8 Break */
     .weak   TIM8_UP_IRQHandler         /* TIM8 Update */
     .weak   TIM8_TRG_COM_IRQHandler    /* TIM8 Trigger and Commutation */
@@ -198,7 +198,7 @@ _start:
     .weak   USART9_IRQHandler          /* USART9 */
     .weak   USART10_IRQHandler         /* USART10 */
     .weak   USBHS1_IRQHandler          /* USBHS1 */
-    .weak   USBHS1Wakeup_IRQHandler    /* USBHS1Wakeup */
+    .weak   USBHS2Wakeup_IRQHandler    /* USBHS2Wakeup */
     .weak   USBHS2_IRQHandler          /* USBHS2 */
     .weak   DVP_IRQHandler             /* DVP */
     .weak   USART6_IRQHandler          /* USART6 */
@@ -269,7 +269,7 @@ USART2_IRQHandler:
 USART3_IRQHandler:          
 EXTI15_10_IRQHandler:       
 RTCAlarm_IRQHandler:        
-USBHS2WakeUp_IRQHandler:   
+USBHS1WakeUp_IRQHandler:   
 TIM8_BRK_IRQHandler:       
 TIM8_UP_IRQHandler:       
 TIM8_TRG_COM_IRQHandler:    
@@ -294,7 +294,7 @@ PSRAM_IRQHandler:
 USART9_IRQHandler:        
 USART10_IRQHandler:       
 USBHS1_IRQHandler:          
-USBHS1Wakeup_IRQHandler:    
+USBHS2Wakeup_IRQHandler:    
 USBHS2_IRQHandler:       
 DVP_IRQHandler:           
 USART6_IRQHandler:          

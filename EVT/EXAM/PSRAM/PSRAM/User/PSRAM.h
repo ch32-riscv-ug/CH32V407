@@ -1,8 +1,8 @@
 /********************************** (C) COPYRIGHT  *******************************
 * File Name          : ch32v4x7_psram.h
 * Author             : WCH
-* Version            : V1.0.2
-* Date               : 2026/10/16
+* Version            : V1.0.3
+* Date               : 2026/11/10
 * Description        : This file contains all the functions prototypes for the PSRAM
 *                      firmware library.
 *********************************************************************************
@@ -45,25 +45,35 @@
 #define Fre_133M             ((uint32_t)0x85)
 #define Fre_166M             ((uint32_t)0xA6)
 #define Fre_200M             ((uint32_t)0xC8)
+#define Fre_225M             ((uint32_t)0xE1)
+#define Fre_250M             ((uint32_t)0xFA)
+#define Fre_300M             ((uint32_t)0x12C)
 
 /*PSRAM  speed select*/
 #define MR4_Write_133M       ((uint32_t)0x2)
 #define MR4_Write_166M       ((uint32_t)0x6)
 #define MR4_Write_200M       ((uint32_t)0x1)
+#define MR4_Write_225M       ((uint32_t)0x5)
+#define MR4_Write_250M       ((uint32_t)0x3)
+#define MR4_Write_300M       ((uint32_t)0x7) 
 
 
 
 #define MR0_Read_133M        ((uint32_t)0x2)
 #define MR0_Read_166M        ((uint32_t)0x3)
 #define MR0_Read_200M        ((uint32_t)0x4)
+#define MR0_Read_225M        ((uint32_t)0x5)
+#define MR0_Read_250M        ((uint32_t)0x6)
+#define MR0_Read_300M        ((uint32_t)0x7)
 
 
 /*PSRAM  Latency select*/
-#define Latency_66M        ((uint32_t)0x3)
-#define Latency_109M       ((uint32_t)0x4)
 #define Latency_133M       ((uint32_t)0x5)
 #define Latency_166M       ((uint32_t)0x6)
 #define Latency_200M       ((uint32_t)0x7)
+#define Latency_225M       ((uint32_t)0x8)
+#define Latency_250M       ((uint32_t)0x9)
+#define Latency_300M       ((uint32_t)0xb)
 
 /*PSRAM  Read Latency Type select*/
 #define Read_Variable        ((uint32_t)0x0)

@@ -45,6 +45,9 @@ Directory
   |      |      |      |      |-- FATFS: 
   |      |      |      |      |      |-- FATFS_SPI_FLASH: This example demonstrates SPI operation Winbond W25Qxx SPIFLASH with FATFS
   |      |      |      |      |      |-- FATFS_SDIO_SD: This example demonstrates reading and writing all sectors of the SD card through the SDIO interface with FATFS
+  |      |      |      |      |-- WCHGUI
+  |      |      |      |      |      |-- WCH-GUI-FLASH: GUI FLASH
+  |      |      |      |      |      |-- WCH-GUI-LIVE: GUI LIVE
   |      |      |      |-- ARGB
   |      |      |      |      |-- Gradient: ARGB routine
   |      |      |      |      |-- PollingFilling: Poll and interrupt mode drive ARGB
