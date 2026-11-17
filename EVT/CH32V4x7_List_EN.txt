@@ -1,5 +1,5 @@
 
-Nanjing Qinheng Microelectronics Co., Ltd. 2026.10
+Nanjing Qinheng Microelectronics Co., Ltd. 2026.11
 
 https://wch-ic.com
 
@@ -36,7 +36,6 @@ Directory
   |      |      |      |      |-- TIM_Trigger:TIM trigger ADC conversion routine 
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- SoftUART: I/O port simulation serial port routine
-  |      |      |      |      |-- LTDC_LVGL: use LTDC driver to display some animations on the LCD
   |      |      |      |      |-- RunInPSRAM: Coremark demo run in PSRAM
   |      |      |      |      |-- AIoCHub: AIoCHub cloud platform application
   |      |      |      |      |-- JPEG_decode_LTDC: LTDC static display decoded JPEG
@@ -45,9 +44,6 @@ Directory
   |      |      |      |      |-- FATFS: 
   |      |      |      |      |      |-- FATFS_SPI_FLASH: This example demonstrates SPI operation Winbond W25Qxx SPIFLASH with FATFS
   |      |      |      |      |      |-- FATFS_SDIO_SD: This example demonstrates reading and writing all sectors of the SD card through the SDIO interface with FATFS
-  |      |      |      |      |-- WCHGUI
-  |      |      |      |      |      |-- WCH-GUI-FLASH: GUI FLASH
-  |      |      |      |      |      |-- WCH-GUI-LIVE: GUI LIVE
   |      |      |      |-- ARGB
   |      |      |      |      |-- Gradient: ARGB routine
   |      |      |      |      |-- PollingFilling: Poll and interrupt mode drive ARGB
@@ -115,6 +111,21 @@ Directory
   |      |      |      |      |-- NORFLASH: FSMC routine to operate NORFLASH 
   |      |      |      |-- GPIO
   |      |      |      |      |-- GPIO_Toggle:GPIO routines 
+  |      |      |      |-- GUI
+  |      |      |      |      |-- LTDC_LVGL: use LTDC driver to display some animations on the LCD
+  |      |      |      |      |-- WCH-GUI-FLASH：WCH-GUI-FLASH routine(Low CPU usage) 
+  |      |      |      |      |      |--GUI_ExternalFlash: WCH-GUI-FLASH use external flash routine
+  |      |      |      |      |      |--GUI_Onflash：WCH-GUI-FLASH use internal flash routine
+  |      |      |      |      |      |--WCHGUI_Lib: WCH-GUI-FLASH core library (with low CPU usage)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--Instructions for downloading external FLASH.pdf
+  |      |      |      |      |      |      |--WCHGUI software documentation.pdf
+  |      |      |      |      |-- WCH-GUI-LIVE：WCH-GUI-LIVE routine(Save storage resources)
+  |      |      |      |      |      |--DEMO1: WCH-GUI-LIVE basic routine
+  |      |      |      |      |      |--DEMO2: WCH-GUI-LIVE complex routine
+  |      |      |      |      |      |--WVUI_Lib: WCH-GUI-LIVE core library(with save storage resources)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--WCH-GUI-Live library Reference Manual.pdf 
   |      |      |      |-- I2C
   |      |      |      |      |-- I2C_7bit_Mode: 7-bit address mode, master/slave mode, transceiver routine
   |      |      |      |      |-- I2C_10bit_Mode: 10 bit address mode, master/slave mode transceiver routine

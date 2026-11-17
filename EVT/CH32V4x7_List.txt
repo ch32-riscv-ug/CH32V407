@@ -1,5 +1,5 @@
 
-南京沁恒微电子股份有限公司 2026.10
+南京沁恒微电子股份有限公司 2026.11
 最新资料请到我们的网站上查询
 https://wch.cn
 
@@ -36,7 +36,6 @@ https://wch.cn
   |      |      |      |      |-- TIM_trigger：定时器触发ADC转换例程 
   |      |      |      |-- APPLICATION
   |      |      |      |      |-- SoftUART：I/O口模拟串口例程 
-  |      |      |      |      |-- LTDC_LVGL：使用LTDC 在屏幕上显示动画
   |      |      |      |      |-- RunInPSRAM: 在PSRAM运行Coremark跑分例程
   |      |      |      |      |-- AIoCHub: AIoCHub 云平台应用
   |      |      |      |      |-- JPEG_decode_LTDC: LTDC 静态显示解码图片
@@ -45,9 +44,6 @@ https://wch.cn
   |      |      |      |      |-- FATFS: 
   |      |      |      |      |      |-- FATFS_SPI_FLASH: 此示例演示了使用FATFS的Winbond W25Qxx SPIFLASH的SPI操作
   |      |      |      |      |      |-- FATFS_SDIO_SD: 此示例演示了如何通过带有FATFS的SDIO接口读写SD卡的全部扇区
-  |      |      |      |      |-- WCHGUI
-  |      |      |      |      |      |-- WCH-GUI-FLASH: GUI 内外部FLASH
-  |      |      |      |      |      |-- WCH-GUI-LIVE: GUI 屏幕显示
   |      |      |      |-- ARGB
   |      |      |      |      |-- Gradient：ARGB例程
   |      |      |      |      |-- PollingFilling: 轮询和中断方式驱动ARGB
@@ -114,7 +110,22 @@ https://wch.cn
   |      |      |      |      |-- SRAM：FSMC操作NOR_SRAM例程  
   |      |      |      |      |-- NORFLASH：FSMC操作NORFLASH例程
   |      |      |      |-- GPIO
-  |      |      |      |      |-- GPIO_Toggle：GPIO例程 
+  |      |      |      |      |-- GPIO_Toggle：GPIO例程
+  |      |      |      |-- GUI
+  |      |      |      |      |-- LTDC_LVGL：使用LTDC 在屏幕上显示动画
+  |      |      |      |      |-- WCH-GUI-FLASH：WCH-GUI-FLASH例程(CPU占用率低) 
+  |      |      |      |      |      |--GUI_ExternalFlash: WCH-GUI-FLASH 使用外部flash的例程
+  |      |      |      |      |      |--GUI_Onflash：WCH-GUI-FLASH 使用内部flash的例程
+  |      |      |      |      |      |--WCHGUI_Lib: WCH-GUI-FLASH 的核心库(CPU占用率低)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--片外FLASH下载操作说明.pdf
+  |      |      |      |      |      |      |--沁恒WCHGUI软件说明文档.pdf
+  |      |      |      |      |-- WCH-GUI-LIVE：WCH-GUI-LIVE例程(节省存储资源) 
+  |      |      |      |      |      |--DEMO1: WCH-GUI-LIVE的基础例程
+  |      |      |      |      |      |--DEMO2: WCH-GUI-LIVE的复杂例程
+  |      |      |      |      |      |--WVUI_Lib: WCH-GUI-LIVE 的核心库(节省存储资源)
+  |      |      |      |      |      |--DOC
+  |      |      |      |      |      |      |--WCH-GUI-Live库参考手册.pdf  
   |      |      |      |-- I2C
   |      |      |      |      |-- I2C_7bit_Mode：7位地址模式，Master/Slave 模式收发例程
   |      |      |      |      |-- I2C_10bit_Mode：10位地址模式，Master/Slave 模式收发例程
